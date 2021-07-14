@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #414141;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dfb303;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active {
+  background-color: #c49c00;
+}
+
+body {
+  background-color: #eeeeee;
+  color: #414141;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #414141;
+}
+
+.main-header {
+  background-color: #414141;
+  -webkit-box-shadow: 0 2px 8px 1px black;
+          box-shadow: 0 2px 8px 1px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 8vh;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  background-color: #414141;
+  color: #eeeeee;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  margin-right: 24px;
+}
+
+.logo:hover {
+  color: #dfb303;
+}
+
+.logo:active {
+  color: #c49c00;
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  list-style-type: none;
+  font-weight: 700;
+}
+
+.nav-menu .nav-item {
+  margin-left: 12px;
+}
+
+.nav-menu .nav-item:first-of-type {
+  margin-left: 0;
+}
+
+.nav-menu .nav-item a {
+  background-color: #414141;
+  color: #eeeeee;
+}
+
+.nav-menu .nav-item a:hover {
+  color: #dfb303;
+}
+
+.nav-menu .nav-item a:active {
+  color: #c49c00;
+}
+
+.introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin-top: 56px;
+  padding: 32px 16px 40px 16px;
+  text-align: center;
+  height: 36vh;
+  width: 100%;
+}
+
+.introduction h1 {
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0;
+  -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+  -webkit-animation: fade-in-down 2s ease forwards;
+          animation: fade-in-down 2s ease forwards;
+}
+
+.introduction h1 span {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.introduction .tw-29 {
+  font-family: "Source Code Pro", monospace;
+  list-style-type: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 4px auto 24px auto;
+  position: relative;
+}
+
+.introduction .tw-29::before, .introduction .tw-29::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.introduction .tw-29::before {
+  background-color: #eeeeee;
+  -webkit-animation: typewriter-animation 3.75s steps(29) 2s forwards;
+          animation: typewriter-animation 3.75s steps(29) 2s forwards;
+}
+
+.introduction .tw-29::after {
+  width: 2px;
+  background-color: black;
+  -webkit-animation: typewriter-animation 3.75s steps(29) 2s forwards, blink 750ms steps(29) infinite;
+          animation: typewriter-animation 3.75s steps(29) 2s forwards, blink 750ms steps(29) infinite;
+}
+
+.introduction button {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 16px;
+  width: 120px;
+  text-align: center;
+  padding: 12px 0;
+  border: 2px solid #dfb303;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.introduction button a {
+  color: #dfb303;
+}
+
+.introduction button:hover {
+  background-color: #dfb303;
+}
+
+.introduction button:hover a {
+  color: #eeeeee;
+}
+
+.introduction button:active {
+  background-color: #c49c00;
+  border: 2px solid #c49c00;
+}
+
+.introduction button:active a {
+  color: #eeeeee;
+}
+
+.portrait-section {
+  height: 44vh;
+  width: 100%;
+  background-color: gainsboro;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.portrait {
+  max-width: 100%;
+  max-height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 200px;
+  display: block;
+}
+
+.main-footer {
+  background-color: #414141;
+  color: #eeeeee;
+  -webkit-box-shadow: 0 2px 8px 1px black;
+          box-shadow: 0 2px 8px 1px black;
+  width: 100%;
+  height: 16vh;
+  text-align: center;
+  padding: 16px 0 32px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.main-footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 300px;
+  width: 56vw;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.main-footer .socials a {
+  background-color: #414141;
+  color: #eeeeee;
+  margin: 4px;
+}
+
+.main-footer .socials a:hover {
+  color: #dfb303;
+}
+
+.main-footer .socials a:active {
+  color: #c49c00;
+}
+
+.main-footer h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.about {
+  margin-top: 56px;
+  padding: 24px 0px 32px 0px;
+  text-align: left;
+  width: 100%;
+}
+
+.about h1 {
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 16px;
+  opacity: 0;
+  -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+  -webkit-animation: fade-in-down 2s ease forwards;
+          animation: fade-in-down 2s ease forwards;
+}
+
+.about p {
+  font-size: 20px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-bottom: 16px;
+}
+
+.about p:last-of-type {
+  margin-bottom: 112px;
+}
+
+.about a {
+  color: #dfb303;
+}
+
+.about a:hover {
+  font-weight: 700;
+}
+
+.about a:active {
+  color: #c49c00;
+}
+
+@-webkit-keyframes typewriter-animation {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typewriter-animation {
+  to {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+@-webkit-keyframes fade-in-down {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .logo {
+    font-size: 20px;
+    margin-left: 96px;
+  }
+  .nav-menu {
+    font-size: 20px;
+    margin-right: 96px;
+  }
+  .nav-menu .nav-item {
+    margin-left: 24px;
+  }
+  .introduction h1 {
+    font-size: 36px;
+  }
+  .introduction .tw-29 {
+    font-size: 20px;
+  }
+  .portrait {
+    width: 230px;
+  }
+  .about h1 {
+    font-size: 32px;
+  }
+  .about p {
+    font-size: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .logo {
+    font-size: 20px;
+    margin-left: 208px;
+  }
+  .nav-menu {
+    font-size: 20px;
+    margin-right: 208px;
+  }
+  .nav-menu .nav-item {
+    margin-left: 24px;
+  }
+  .introduction h1 {
+    font-size: 36px;
+  }
+  .introduction .tw-29 {
+    font-size: 20px;
+  }
+  .portrait {
+    width: 230px;
+  }
+  .about h1 {
+    font-size: 32px;
+  }
+  .about p {
+    font-size: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+}

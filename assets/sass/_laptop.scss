@@ -1,0 +1,40 @@
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        font-size: 20px;
+        margin-left: 96px;
+    }
+
+    .nav-menu {
+        font-size: 20px;
+        margin-right: 96px;
+
+        .nav-item {
+        margin-left: 24px;
+    }
+    }
+
+    .introduction {    
+        h1 {
+            font-size: 36px;
+        }
+
+        .tw-29 {
+            font-size: 20px;
+        }
+    }
+
+    .portrait {
+        width: 230px;
+    }
+
+    .about {
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 20px;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+    }
+}
