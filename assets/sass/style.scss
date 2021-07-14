@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -194,7 +198,7 @@ a {
     height: 44vh;
     width: 100%;
     background-color: gainsboro;
-    margin-bottom: 56px;
+    // margin-bottom: 56px;
 
     display: flex;
     justify-content: center;
@@ -219,6 +223,7 @@ a {
     padding: 16px 0 32px 0;
     position: fixed;
     bottom: 0;
+    z-index: 1;
 
     .socials {
         display: flex;
