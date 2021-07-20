@@ -422,7 +422,7 @@ nav .nav-item:active {
 }
 
 .flex-container:last-of-type {
-  margin: 8px auto 80px auto;
+  margin: 8px auto 104px auto;
 }
 
 .skill-column {
@@ -621,6 +621,10 @@ textarea:focus {
   .circle-container {
     width: 88px;
     height: 88px;
+    font-size: 20px;
+  }
+  .circle-caption {
+    font-size: 20px;
   }
   .contact-page {
     margin: 56px auto 0 auto;
@@ -696,6 +700,10 @@ textarea:focus {
   .circle-container {
     width: 88px;
     height: 88px;
+    font-size: 20px;
+  }
+  .circle-caption {
+    font-size: 20px;
   }
   .contact-page {
     margin: 56px auto 0 auto;
