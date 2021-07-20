@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Raleway:ital,wght@0,400;0,700;0,900;1,300&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Raleway:ital,wght@0,400;0,700;0,900;1,300;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -19,13 +19,20 @@
 
 <body>
     <header class="main-header">
-        <a href="./about/" class="logo">Salvatore Stampone</a>
-        <nav>
-            <ol class="nav-menu">
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="./about/">About</a></li>
-            </ol>
-        </nav>
+        <div class="logo-nav-container">
+            <a href="index.html" class="logo">Salvatore Stampone</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span><i class="fas fa-bars"></i></span>
+                <span><i class="fas fa-times"></i></span>
+            </label>
+            <nav>
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="./skills/" class="nav-item">Skills</a>
+                <a href="./contact/" class="nav-item">Contact</a>
+                <a href="./about/" class="nav-item">About</a>
+            </nav>
+        </div>
     </header>
 
     <section class="introduction">
@@ -33,7 +40,9 @@
                 Salvatore Stampone
             </span></h1>
         <p class="tw-29" id="typewriter-carousel">Web & App Development Student</p>
-        <button><a href="mailto:salvatorestampone@icloud.com">CONTACT</a></button>
+        <button class="std-button"><a href="https://github.com/salvatore-stampone" target="_blank"><span>Check out
+                    my</span> Github
+                profile</a></button>
     </section>
 
     <section class="portrait-section">
@@ -42,13 +51,34 @@
 
     <footer class="main-footer">
         <div class="socials">
-            <a href="https://www.facebook.com/salvatore.stampone/" target="_blank"><i
-                    class="fab fa-2x fa-facebook"></i></a>
-            <a href="https://www.instagram.com/salvatorestampone.dev/" target="_blank"><i
-                    class="fab fa-2x fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/salvatore-stampone-781a511b5/" target="_blank"><i
-                    class="fab fa-2x fa-linkedin"></i></a>
-            <a href="https://twitter.com/slavarote" target="_blank"><i class="fab fa-2x fa-twitter"></i></a>
+            <div class="social-container">
+                <a href="https://github.com/salvatore-stampone" target="_blank"><i class="fab fa-2x fa-github"></i>
+                    <h6>Github</h6>
+                </a>
+            </div>
+            <div class="social-container">
+                <a href="https://www.linkedin.com/in/salvatore-stampone-781a511b5/" target="_blank"><i
+                        class="fab fa-2x fa-linkedin"></i>
+                    <h6>LinkedIn</h6>
+                </a>
+            </div>
+            <div class="social-container">
+                <a href="https://www.instagram.com/salvatorestampone.dev/" target="_blank"><i
+                        class="fab fa-2x fa-instagram"></i>
+                    <h6>Instagram</h6>
+                </a>
+            </div>
+            <div class="social-container">
+                <a href="https://www.facebook.com/salvatore.stampone/" target="_blank"><i
+                        class="fab fa-2x fa-facebook"></i>
+                    <h6>Facebook</h6>
+                </a>
+            </div>
+            <div class="social-container">
+                <a href="https://twitter.com/slavarote" target="_blank"><i class="fab fa-2x fa-twitter"></i>
+                    <h6>Twitter</h6>
+                </a>
+            </div>
         </div>
         <h6>&copy;2021 Salvatore Stampone</h6>
     </footer>

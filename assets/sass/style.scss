@@ -15,14 +15,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: $dark-color;
+    background-color: $dark-color;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: $primary-color;
     border-radius: 5px;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
         background-color: $dark-primary-color;
     }
 }
@@ -30,7 +31,7 @@ html {
 body {
     background-color: $light-color;
     color: $dark-color;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -47,53 +48,100 @@ a {
     align-items: center;
     width: 100%;
     height: 8vh;
+    max-height: 64px;
     padding: 16px;
     position: fixed;
     top: 0;
     z-index: 1;
+
+    label {
+        cursor: pointer;
+    }
+}
+
+.logo-nav-container {
+    width: 80vw;
+    max-width: 472px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     @include set-background-color($dark-color);
 
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 900;
-    margin-right: 24px;
 
     &:hover {
         color: $primary-color;
     }
 
     &:active {
-                color: $dark-primary-color;
-            }
+        color: $dark-primary-color;
+    }
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: flex-end;
-    width: fit-content;
+nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
     list-style-type: none;
     font-weight: 700;
+    @include set-background-color($dark-color);
+    position: absolute;
+    left: 0;
 
     .nav-item {
-        margin-left: 12px;
+        margin-left: 16px;
+        @include set-background-color($dark-color);
 
         &:first-of-type {
             margin-left: 0;
         }
 
-        a {
-            @include set-background-color($dark-color);
-
-            &:hover {
-                color: $primary-color;
-            }
-
-            &:active {
-                color: $dark-primary-color;
-            }
+        &:hover {
+            color: $primary-color;
         }
+
+        &:active {
+            color: $dark-primary-color;
+        }
+    }
+}
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+
+    &:checked ~ nav {
+        display: flex;
+    }
+
+    &:checked ~ label span:first-child {
+        display: none;
+    }
+
+    &:not(:checked) ~ label span:last-child {
+        display: none;
+    }
+}
+
+.nav-toggle-label {
+    font-size: 20px;
+    @include set-background-color($dark-color);
+    z-index: 2;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    &:active {
+        color: $dark-primary-color;
     }
 }
 
@@ -108,7 +156,7 @@ a {
     text-align: center;
     height: 36vh;
     width: 100%;
-    
+
     h1 {
         font-weight: 400;
         font-style: italic;
@@ -117,7 +165,7 @@ a {
         animation: fade-in-down 2s ease forwards;
 
         span {
-            font-family: 'Playfair Display', serif;
+            font-family: "Playfair Display", serif;
             font-weight: 900;
             font-style: normal;
         }
@@ -158,21 +206,26 @@ a {
         }
     }
 
-    button {
-        font-family: 'Raleway', sans-serif;
+    .std-button {
+        font-family: "Raleway", sans-serif;
         font-weight: 900;
         font-style: normal;
         font-size: 16px;
-        width: 120px;
+        width: 144px;
         text-align: center;
 
-        padding: 12px 0;
+        padding: 12px 4px;
         border: 2px solid $primary-color;
         border-radius: 8px;
         cursor: pointer;
 
         a {
             color: $primary-color;
+
+            span {
+                color: $dark-color;
+                font-weight: 700;
+            }
         }
 
         &:hover {
@@ -198,7 +251,6 @@ a {
     height: 44vh;
     width: 100%;
     background-color: gainsboro;
-    // margin-bottom: 56px;
 
     display: flex;
     justify-content: center;
@@ -219,8 +271,9 @@ a {
 
     width: 100%;
     height: 16vh;
+    max-height: 128px;
     text-align: center;
-    padding: 16px 0 32px 0;
+    padding: 8px 0 24px 0;
     position: fixed;
     bottom: 0;
     z-index: 1;
@@ -228,15 +281,23 @@ a {
     .socials {
         display: flex;
         justify-content: space-around;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         max-width: 300px;
-        width: 56vw;
-        margin: 0 auto;
-        margin-bottom: 12px;
+        width: 75vw;
+        margin: 8px auto 12px auto;
+
+        .social-container {
+            display: flex;
+            margin: 0 4px;
+
+            h6 {
+                font-size: 8px;
+            }
+        }
 
         a {
             @include set-background-color($dark-color);
-            margin: 4px;
+            margin: 0 4px;
 
             &:hover {
                 color: $primary-color;
@@ -249,18 +310,18 @@ a {
     }
 
     h6 {
-        font-family: 'Playfair Display', serif;
+        font-family: "Playfair Display", serif;
     }
 }
 
-.about {
+.other-page {
     margin-top: 56px;
     padding: 24px 0px 32px 0px;
     text-align: left;
     width: 100%;
 
     h1 {
-        font-weight: 700;
+        font-weight: 900;
         font-style: italic;
         text-align: center;
 
@@ -273,9 +334,9 @@ a {
 
     p {
         font-size: 20px;
-        margin-left: 75px;
-        margin-right: 75px;
-        margin-bottom: 16px;
+        margin: 0 auto 16px auto;
+        width: 65vw;
+        // max-width: 472px;
 
         &:last-of-type {
             margin-bottom: 112px;
@@ -293,19 +354,158 @@ a {
             color: $dark-primary-color;
         }
     }
+
+    strong {
+        color: $dark-color;
+    }
+
+    hr {
+        width: 25vw;
+        margin: 1em auto;
+        color: $dark-color;
+    }
+}
+
+.skills-field {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 8px auto;
+    width: 300px;
+    flex-wrap: wrap;
+
+    &:last-of-type {
+        margin: 8px auto 80px auto;
+    }
+}
+
+.skill-column {
+    text-align: center;
+}
+
+.circle-container {
+    display: grid;
+    place-items: center;
+    background-color: $dark-color;
+    color: $primary-color;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+.contact-page {
+    @extend .other-page;
+
+    p {
+        text-align: center;
+
+        &:last-of-type {
+            margin-bottom: 16px;
+        }
+    }
+
+    label {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 90%;
+        height: 32px;
+        margin: 0 auto 16px auto;
+        border-radius: 4px;
+        border-top-style: hidden;
+        border-left-style: hidden;
+        border-right-style: hidden;
+        border-color: $dark-color;
+        padding: 0 8px;
+        font-family: "Raleway", sans-serif;
+        color: $dark-color;
+
+        &:focus {
+            outline: none;
+            background-color: rgba($color: $primary-color, $alpha: 0.1);
+        }
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto 32px auto;
+}
+
+textarea {
+    resize: none;
+    width: 90%;
+    height: 120px;
+    margin: 0 auto 16px auto;
+    border-radius: 4px;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-color: $dark-color;
+    padding: 12px 8px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: $dark-color;
+
+    &:focus {
+        outline: none;
+        background-color: rgba($color: $primary-color, $alpha: 0.1);
+    }
+}
+
+.send-button {
+    margin: 0 auto;
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 16px;
+    width: 104px;
+    text-align: center;
+
+    padding: 12px 4px;
+    border: 2px solid $primary-color;
+    border-radius: 8px;
+    cursor: pointer;
+
+    color: $primary-color;
+
+    &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+    }
+
+    &:active {
+        background-color: $dark-primary-color;
+        border: 2px solid $dark-primary-color;
+
+        a {
+            color: $light-color;
+        }
+    }
 }
 
 @keyframes typewriter-animation {
-        to {
-            left: 100%;
-        }
+    to {
+        left: 100%;
     }
+}
 
 @keyframes blink {
-        to {
-            background-color: transparent;
-        }
+    to {
+        background-color: transparent;
     }
+}
 
 @keyframes fade-in-down {
     to {

@@ -1,19 +1,20 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .logo {
+    .logo-nav-container {
         font-size: 20px;
-        margin-left: 96px;
+        margin: 0 auto;
+        width: 65%;
+        max-width: 616px;
     }
 
     .nav-menu {
         font-size: 20px;
-        margin-right: 96px;
 
         .nav-item {
-        margin-left: 24px;
-    }
+            margin-left: 24px;
+        }
     }
 
-    .introduction {    
+    .introduction {
         h1 {
             font-size: 36px;
         }
@@ -27,14 +28,62 @@
         width: 230px;
     }
 
-    .about {
+    .other-page {
         h1 {
             font-size: 32px;
         }
         p {
             font-size: 20px;
-            margin-left: 150px;
-            margin-right: 150px;
+            margin: 0 auto 16px auto;
+            width: 65%;
+            max-width: 616px;
+        }
+    }
+
+    .main-footer {
+        h6 {
+            font-size: 12px;
+        }
+    }
+
+    .skills-field,
+    .skill-column {
+        font-size: 24px;
+    }
+
+    .flex-container {
+        width: 400px;
+    }
+
+    .circle-container {
+        width: 88px;
+        height: 88px;
+    }
+
+    .contact-page {
+        margin: 56px auto 0 auto;
+
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 72px;
+            height: 32px;
+        }
+    }
+
+    .contact-form {
+        flex-direction: row;
+        width: 400px;
+
+        input[type="text"],
+        input[type="email"] {
+            width: 320px;
+        }
+
+        textarea {
+            width: 320px;
+            height: 200px;
         }
     }
 }
