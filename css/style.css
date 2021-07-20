@@ -276,6 +276,7 @@ nav .nav-item:active {
   height: 44vh;
   width: 100%;
   background-color: gainsboro;
+  margin-bottom: 104px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,9 +318,7 @@ nav .nav-item:active {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  max-width: 300px;
+  max-width: 200px;
   width: 75vw;
   margin: 8px auto 12px auto;
 }
@@ -379,7 +378,7 @@ nav .nav-item:active {
 }
 
 .other-page p:last-of-type, .contact-page p:last-of-type {
-  margin-bottom: 112px;
+  margin-bottom: 104px;
 }
 
 .other-page a, .contact-page a {
@@ -484,7 +483,7 @@ nav .nav-item:active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 300px;
-  margin: 0 auto 32px auto;
+  margin: 0 auto 104px auto;
 }
 
 textarea {
