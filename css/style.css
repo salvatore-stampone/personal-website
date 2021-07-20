@@ -239,6 +239,9 @@ nav .nav-item:active {
   font-style: normal;
   font-size: 16px;
   width: 144px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   text-align: center;
   padding: 12px 4px;
   border: 2px solid #dfb303;
@@ -276,7 +279,7 @@ nav .nav-item:active {
   height: 44vh;
   width: 100%;
   background-color: gainsboro;
-  margin-bottom: 104px;
+  margin-bottom: 16vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,10 +593,13 @@ textarea:focus {
     margin-left: 24px;
   }
   .introduction h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
   .introduction .tw-29 {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .portrait-section {
+    margin-bottom: 104px;
   }
   .portrait {
     width: 230px;
@@ -672,10 +678,13 @@ textarea:focus {
     margin-left: 24px;
   }
   .introduction h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
   .introduction .tw-29 {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .portrait-section {
+    margin-bottom: 104px;
   }
   .portrait {
     width: 230px;
