@@ -74,9 +74,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -108,7 +108,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 8vh;
+  height: 2em;
   list-style-type: none;
   font-weight: 700;
   background-color: #414141;
@@ -172,6 +172,18 @@ nav .nav-item:active {
 }
 
 .nav-toggle-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  width: 8vh;
   font-size: 20px;
   background-color: #414141;
   color: #eeeeee;
@@ -568,6 +580,104 @@ textarea:focus {
   color: #eeeeee;
 }
 
+.portfolio-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  width: 90vw;
+  max-width: 368px;
+  height: 100%;
+  max-height: 160px;
+  border: 2px solid #414141;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin: 0.75em;
+}
+
+.card-image {
+  width: 75vw;
+  max-width: 368px;
+}
+
+.card-image img {
+  max-width: 368px;
+}
+
+.card-title {
+  background-color: rgba(65, 65, 65, 0.8);
+  color: #eeeeee;
+  width: 100%;
+  height: 35%;
+  padding: 0.25em;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #414141;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-button {
+  font-family: "Raleway", sans-serif;
+  width: 5em;
+  height: 85%;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 0.85em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4px 2px;
+  border: 2px solid #dfb303;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card-button a {
+  color: #dfb303;
+}
+
+.card-button:hover {
+  background-color: #dfb303;
+}
+
+.card-button:hover a {
+  color: #eeeeee;
+  font-weight: 900;
+}
+
+.card-button:active {
+  background-color: #c49c00;
+  border: 2px solid #c49c00;
+}
+
+.card-button:active a {
+  color: #eeeeee;
+}
+
 @-webkit-keyframes typewriter-animation {
   to {
     left: 100%;
@@ -605,6 +715,17 @@ textarea:focus {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    width: 80%;
+    padding-left: 4em;
+    overflow: scroll;
+  }
+  .nav-item:first-of-type {
+    padding-left: 2em;
   }
 }
 
